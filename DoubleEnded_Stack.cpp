@@ -91,24 +91,12 @@ int main() {
         printf("6. Exit\n");
         printf("Enter choice: ");
 
-        if (scanf("%d", &choice) != 1) {
-            printf("Invalid input\n");
-            int ch;
-            while ((ch = getchar()) != '\n' && ch != EOF) {
-            }
-            continue;
-        }
+        scanf("%d", &choice) ;
 
         switch (choice) {
             case 1:
                 printf("Enter element: ");
-                if (scanf("%d", &x) != 1) {
-                    printf("Invalid element\n");
-                    int ch;
-                    while ((ch = getchar()) != '\n' && ch != EOF) {
-                    }
-                    break;
-                }
+                scanf("%d", &x);
                 push1(x);
                 break;
 
@@ -118,13 +106,7 @@ int main() {
 
             case 3:
                 printf("Enter element: ");
-                if (scanf("%d", &x) != 1) {
-                    printf("Invalid element\n");
-                    int ch;
-                    while ((ch = getchar()) != '\n' && ch != EOF) {
-                    }
-                    break;
-                }
+                scanf("%d", &x);
                 push2(x);
                 break;
 
@@ -135,9 +117,9 @@ int main() {
             case 5:
                 display();
                 break;
-
             case 6:
                 return 0;
+                break;
 
             default:
                 printf("Invalid choice. Enter 1 to 6\n");
